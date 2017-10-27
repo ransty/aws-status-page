@@ -5,15 +5,15 @@ use Aws\CloudWatch\CloudWatchClient;
 
   $client = CloudWatchClient::factory(array(
     'credentials' => array(
-        'key'    => 'AKIAJKHUAUUU7Z2VKM7Q',
-        'secret' => '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',
+        'key'    => '',
+        'secret' => '',
     ),
-    'region' => 'us-east-1',
+    'region' => 'ap-southeast-2',
     'version' => latest
   ));
 
   $dimensions = array(
-      array('Name' => 'InstanceId', 'Value' => 'i-05645fdeb5032b0f5')
+      array('Name' => 'InstanceId', 'Value' => 'i-0779cad12b785cc39')
   );
 
   $result = $client->getMetricStatistics(array(
@@ -49,3 +49,5 @@ use Aws\CloudWatch\CloudWatchClient;
       }
   }
 ?>
+
+<title>NetworkOut</title>

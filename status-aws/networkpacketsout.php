@@ -18,7 +18,7 @@ $dimensions = array(
 
 $result = $client->getMetricStatistics(array(
     'Namespace'  => 'AWS/EC2',
-    'MetricName' => 'NetworkIn',
+    'MetricName' => 'NetworkPacketsOut',
     'Dimensions' => $dimensions,
     'StartTime'  => strtotime('-1 days'),
     'EndTime'    => strtotime('now'),
@@ -26,8 +26,8 @@ $result = $client->getMetricStatistics(array(
     'Statistics' => array('Average'),
 ));
 
-echo "<h1>Todays NetworkIn Stats</h1>";
-echo "Showing NetworkIn stats from <strong>" . date("F j, Y", strtotime("yesterday")) . " " . date("h:i:sa") . "</strong> to <strong>" . date("F d, Y h:i:sa") . "</strong><br>";
+echo "<h1>Todays NetworkPacketsOut Stats</h1>";
+echo "Showing NetworkPacketsOut stats from <strong>" . date("F j, Y", strtotime("yesterday")) . " " . date("h:i:sa") . "</strong> to <strong>" . date("F d, Y h:i:sa") . "</strong><br>";
 echo "All values are displayed as the Average for the Hour";
 
 $arr = $result->get("Datapoints");
@@ -50,4 +50,4 @@ foreach ($arr as &$value) {
 }
 ?>
 
-<title>NetworkIn</title>
+<title>NetworkPacketsIn</title>
