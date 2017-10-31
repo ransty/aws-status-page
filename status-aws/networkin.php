@@ -5,8 +5,8 @@ use Aws\CloudWatch\CloudWatchClient;
 
 $client = CloudWatchClient::factory(array(
   'credentials' => array(
-      'key'    => '',
-      'secret' => '',
+      'key'    => 'AKIAJMRZ5SFXOIG6G2SA',
+      'secret' => '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',
   ),
   'region' => 'ap-southeast-2',
   'version' => latest
